@@ -1,3 +1,5 @@
+#ECDF formula function 
+
 def ecdf(data):
     """Compute ECDF for a one-dimensional array of measurements."""
     # Number of data points: n
@@ -10,3 +12,24 @@ def ecdf(data):
     y= np.arange(1, n+1)/n
 
     return x, y
+    
+# plot ECDF 
+# dataset: versicolor_petal_length
+import numpy as np
+# Compute ECDF for versicolor data: x_vers, y_vers
+x_vers, y_vers= ecdf(versicolor_petal_length)
+
+# Generate plot
+plt.plot(x_vers, y_vers,marker = '.',linestyle = 'none')
+
+# Label the axes
+
+plt.xlabel('petal_length')
+plt.ylabel('ECDF')
+
+# Display the plot
+plt.show()
+
+    
+    
+    
