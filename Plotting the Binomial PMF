@@ -1,0 +1,22 @@
+#plotting a nice looking PMF requires a bit of matplotlib trickery that we will not go into here. 
+#Instead, plot the PMF of the Binomial distribution as a histogram 
+
+
+#We want the bins centered on the integers. So, the edges of the bins should be -0.5, 0.5, 1.5, 2.5, ... up to max(n_defaults) + 1.5. 
+# can generate an array like this using np.arange() and then subtracting 0.5 from the array.
+
+# Compute bin edges: bins
+bins = np.arange(0, max(n_defaults)+ 1.5) - 0.5
+
+# Generate histogram
+plt.hist(n_defaults,normed=True,bins=bins)
+
+# Label axes
+
+plt.xlabel('Sccuess')
+plt.ylabel('bimonial PMF')
+
+
+
+# Show the plot
+plt.show()
