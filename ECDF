@@ -66,7 +66,7 @@ x,y=ecdf(n_defaults)
 # Plot the CDF with axis labels
 plt.plot(x,y,marker = '.',linestyle = 'none')
 
-plt.xlabel('sample number ')
+plt.xlabel('sccuess number ')
 plt.ylabel('CDF')
 # Show the plot
 plt.show()
