@@ -37,6 +37,8 @@ sigma=np.std(belmont_no_outliers)
 samples=np.random.normal(mu,sigma,10000)
 
 # Get the CDF of the samples and of the data
+#Compute the CDF of the theoretical samples and the ECDF of the Belmont winners' data,
+# assigning the results to x_theor, y_theor and x, y, respectively.
 
 x_theor, y_theor=ecdf(samples)
 x,y=ecdf(belmont_no_outliers)
