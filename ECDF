@@ -97,3 +97,7 @@ plt.ylabel('CDF')
 # Show the plot
 plt.show()
 
+#It looks like no-hitters in the modern era of Major League Baseball are Exponentially distributed. 
+#Based on the story of the Exponential distribution, this suggests that they are a random process; 
+#when a no-hitter will happen is independent of when the last no-hitter was.
+
