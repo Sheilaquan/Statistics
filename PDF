@@ -1,4 +1,9 @@
 #The Normal PDF
+#In probability theory, a probability density function (PDF), or density of a continuous random variable, 
+#is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random
+#variable) can be interpreted as providing a relative likelihood that the value of the random variable would equal that sample.
+
+#the area under the pdf gives probability 
 # Draw 100000 samples from Normal distribution with stds of interest: samples_std1, samples_std3, samples_std10
 
 samples_std1=np.random.normal(20,1,100000)
