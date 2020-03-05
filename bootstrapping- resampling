@@ -90,3 +90,7 @@ _ = plt.ylabel('PDF')
 
 # Show the plot
 plt.show()
+
+# interpretation of the histplot - This gives you an estimate of what the typical time between no-hitters is. It could be anywhere between 660 and 870 games.
+
+
