@@ -64,3 +64,9 @@ _ = plt.ylabel('PDF')
 plt.show()
 # interpretation: SEM(The standard deviation of this distribution, called the standard error of the mean, or SEM) we got from the known expression and the bootstrap replicates is the same and 
 #the distribution of the bootstrap replicates of the mean is Normal.
+
+
+
+#bootstramp confidence interval 
+
+conf_int = np.percentile(bs_replicates, [2.5, 97.5])
