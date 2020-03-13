@@ -21,3 +21,46 @@ def permutation_sample(data1, data2):
     perm_sample_2 = permuted_data[len(data1):]
 
     return perm_sample_1, perm_sample_2
+    
+    
+#Visualizing permutation sampling
+
+#use the Sheffield Weather Station data again, this time considering the monthly rainfall in June (a dry month) and November (a wet month). 
+#We expect these might be differently distributed, 
+#so we will take permutation samples to see how their ECDFs would look if they were identically distributed.
+
+
+#Write a for loop to generate 50 permutation samples, compute their ECDFs, and plot them
+#Generate a permutation sample pair from rain_june and rain_november using your permutation_sample() function.
+#Generate the x and y values for an ECDF for each of the two permutation samples for the ECDF using your ecdf() function.
+
+for _ in range(50):
+    # Generate permutation samples
+    perm_sample_1, perm_sample_2 = permutation_sample(rain_june, rain_november)
+
+
+    # Compute ECDFs
+    x_1, y_1 = ecdf(perm_sample_1)
+    x_2, y_2 = ecdf(perm_sample_2)
+
+    # Plot ECDFs of permutation sample
+    _ = plt.plot(x_1,y_1, marker='.', linestyle='none',
+                 color='red', alpha=0.02)
+    _ = plt.plot(x_2,y_2, marker='.', linestyle='none',
+                 color='blue', alpha=0.02)
+
+# Create and plot ECDFs from original data
+x_1, y_1 = ecdf(rain_june)
+x_2, y_2 = ecdf(rain_november)
+_ = plt.plot(x_1, y_1, marker='.', linestyle='none', color='red')
+_ = plt.plot(x_2, y_2, marker='.', linestyle='none', color='blue')
+
+# Label axes, set margin, and show plot
+plt.margins(0.02)
+_ = plt.xlabel('monthly rainfall (mm)')
+_ = plt.ylabel('ECDF')
+plt.show()
+
+
+#interpretation: None of the ECDFs from the permutation samples overlap with the observed data, 
+#suggesting that the hypothesis is not commensurate with the data. June and November rainfall are not identically distributed.
