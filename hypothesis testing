@@ -1,5 +1,13 @@
 #Hypothesis testing 
 
+#pipline 
+#- state the null hypothesis 
+#-define test stats
+#-generate many sets of simulation data assuming the null hypothesis is true
+#-compute test stats for each simulated data set 
+#- calculate P value and draw conclusion
+
+
 # Significance level - level of data being true (true difference)- showed opposite by stats software  - if 95% true, the test statistics would be 0.05. if 20.5% data is true, the test stats would be be 0.795 
 
 # In all cases, the p value tells you how likely something is to be not true.
